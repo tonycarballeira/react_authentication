@@ -10,7 +10,7 @@ var {
 module.exports = React.createClass({
 	render: function() {
 		return (
-			<View>
+			<View style={styles.container}>
 				<Text>Sign In</Text>
 			</View>
 		)
