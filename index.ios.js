@@ -6,5 +6,5 @@ var { AppRegistry } = React;
 
 var Main = require('./src/main');
 
-AppRegistry.resgisterComponent('authentication', () => Main);
+AppRegistry.registerComponent('authentication', () => Main);
 
