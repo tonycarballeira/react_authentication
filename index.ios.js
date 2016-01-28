@@ -1,7 +1,10 @@
 var React = require('react-native');
 
-var = {
-  View,
-  Text,
-  StyleSheet
-} = React
+var { AppRegistry } = React;
+
+// the below code requires main and registers it as the main component
+
+var Main = require('./src/main');
+
+AppRegistry.resgisterComponent('authentication', () => Main);
+
