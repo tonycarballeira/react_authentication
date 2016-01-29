@@ -8,8 +8,25 @@ var {
 
 module.exports = React.createClasee({
 	render: function() {
-		<TouchableHighlight>
-			<Text></Text>
+		<TouchableHighlight style={styles.button}>
+			<Text style={styles.buttonText}></Text>
 		</TouchableHighlight
+	}
+});
+
+var styles = StyleSheet.creat({
+	button: {
+		justifyContent: 'center',
+		alignItems: 'center',
+		borderWidth: 1,
+		borderRadius: 5,
+		padding: 5,
+		borderColor: 'black',
+		marginTop: 10
+	},
+	buttonText: {
+		flex: 1,
+		alignSelf: 'center',
+		fontSize: 20
 	}
 });
