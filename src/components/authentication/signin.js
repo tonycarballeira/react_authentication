@@ -7,9 +7,17 @@ var {
 	TextInput
 } = React;
 
-var Button = require('../common/button')
+var Button = require('../common/button');
 
 module.exports = React.createClass({
+
+	getIntialState: function() {
+		return {
+			username: '',
+			password: ''
+		};
+	},
+
 	render: function() {
 		return (
 			<View style={styles.container}>
@@ -20,13 +28,14 @@ module.exports = React.createClass({
 
 				<Text style={styles.label}>Password:</Text>
 				<TextInput secureTextEntry={true} style={styles.input} />
-				<button text={'Sign In'} onPress={this.onPress} />
+
+				<Button text={'Sign In'} onPress={this.onPress} />
 			</View>
-		)
+		);
 	},
 
 	onPress: function() {
-		
+		// log the user in
 	}
 });
 

@@ -6,20 +6,22 @@ var {
 	TouchableHighlight
 } = React;
 
-module.exports = React.createClasee({
+module.exports = React.createClass({
 	render: function() {
-		<TouchableHighlight 
-		 style={styles.button} 
-		 underlayColor={'gray'}
-		 onPress={this.props.onPress}>
+		return (
+			<TouchableHighlight 
+			 style={styles.button} 
+			 underlayColor={'gray'}
+			 onPress={this.props.onPress}>
 
-			<Text style={styles.buttonText}>{this.props.text}</Text>
+				<Text style={styles.buttonText}>{this.props.text}</Text>
 
-		</TouchableHighlight
+			</TouchableHighlight>
+		);
 	}
 });
 
-var styles = StyleSheet.creat({
+var styles = StyleSheet.create({
 	button: {
 		justifyContent: 'center',
 		alignItems: 'center',
