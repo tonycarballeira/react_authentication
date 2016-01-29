@@ -7,6 +7,8 @@ var {
 	TextInput
 } = React;
 
+var Button = require('../common/button')
+
 module.exports = React.createClass({
 	render: function() {
 		return (
@@ -15,11 +17,16 @@ module.exports = React.createClass({
 
 				<Text style={styles.label}>Username:</Text>
 				<TextInput style={styles.input} />
-				
+
 				<Text style={styles.label}>Password:</Text>
 				<TextInput secureTextEntry={true} style={styles.input} />
+				<button text={'Sign In'} onPress={this.onPress} />
 			</View>
 		)
+	},
+
+	onPress: function() {
+		
 	}
 });
 
