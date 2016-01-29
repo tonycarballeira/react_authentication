@@ -8,8 +8,13 @@ var {
 
 module.exports = React.createClasee({
 	render: function() {
-		<TouchableHighlight style={styles.button}>
-			<Text style={styles.buttonText}></Text>
+		<TouchableHighlight 
+		 style={styles.button} 
+		 underlayColor={'gray'}
+		 onPress={this.props.onPress}>
+
+			<Text style={styles.buttonText}>{this.props.text}</Text>
+
 		</TouchableHighlight
 	}
 });
