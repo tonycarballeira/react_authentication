@@ -1,4 +1,6 @@
 var React = require('react-native');
+var Firebase = require('firebase');	
+var myFirebaseRef = new Firebase('https://crackling-inferno-2914.firebaseio.com/')
 
 var {
 	View,
@@ -11,7 +13,7 @@ var Button = require('../common/button');
 
 module.exports = React.createClass({
 
-	getIntialState: function() {
+	getInitialState: function() {
 		return {
 			username: '',
 			password: ''
@@ -30,7 +32,11 @@ module.exports = React.createClass({
 				 onChangeText={(text) => this.setState({username: text})} />
 
 				<Text style={styles.label}>Password:</Text>
-				<TextInput secureTextEntry={true} style={styles.input} />
+				<TextInput 
+				 secureTextEntry={true} 
+				 value={this.state.password}
+				 onChangeText={(text) => this.setState({password: text})}
+				 style={styles.input} />
 
 				<Button text={'Sign In'} onPress={this.onPress} />
 			</View>
@@ -38,7 +44,17 @@ module.exports = React.createClass({
 	},
 
 	onPress: function() {
-		// log the user in
+		console.log('hello');
+
+		myFirebaseRef.set({
+  			title: "Hello World!",
+  			author: "Firebase",
+  			location: {
+				city: "San Francisco",
+    			state: "California",
+    			zip: 94103
+  			}
+		});
 	}
 });
 

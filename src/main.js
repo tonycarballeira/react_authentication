@@ -1,4 +1,6 @@
-var React = require('react-native');	
+var React = require('react-native');
+var Firebase = require('firebase');	
+var myFirebaseRef = new Firebase('https://crackling-inferno-2914.firebaseio.com/')
 
 var {
 	View,
