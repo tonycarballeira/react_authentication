@@ -15,7 +15,7 @@ module.exports = React.createClass({
 				<Text style={styles.label}>Username:</Text>
 				<TextInput style={styles.input} />
 				<Text style={styles.label}>Password:</Text>
-				<TextInput style={styles.input} />
+				<TextInput secureTextEntry={true} style={styles.input} />
 			</View>
 		)
 	}
