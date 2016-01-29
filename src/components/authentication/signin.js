@@ -12,8 +12,10 @@ module.exports = React.createClass({
 		return (
 			<View style={styles.container}>
 				<Text>Sign In</Text>
+
 				<Text style={styles.label}>Username:</Text>
 				<TextInput style={styles.input} />
+				
 				<Text style={styles.label}>Password:</Text>
 				<TextInput secureTextEntry={true} style={styles.input} />
 			</View>
